@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Syne } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 // const poppins = Poppins({ subsets: ['latin'] , weight: ['100', '200', '300', '400']})
 const syne = Syne({ subsets: ['latin'] , weight: ['700']})
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         {children }
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
