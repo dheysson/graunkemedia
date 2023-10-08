@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        reveal: {
+          'from': {width: '100%'},
+          'to': {width: '0%'},
+        }
+      },
       dropShadow: {
         glow: ['0px 0px 24px rgba(255,168,54,0.6)']
       },
@@ -18,6 +24,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animation-delay')],
 }
 export default config

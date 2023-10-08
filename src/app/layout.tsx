@@ -1,11 +1,16 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Syne } from 'next/font/google'
 
-const poppins = Poppins({ subsets: ['latin'] , weight: ['100', '200', '300', '400']})
-
+// const poppins = Poppins({ subsets: ['latin'] , weight: ['100', '200', '300', '400']})
+const syne = Syne({ subsets: ['latin'] , weight: ['700']})
+// const archivo = Archivo({ subsets: ['latin'] , weight: ['400']})
+ 
 //import header
 import Header from '../components/header';
+
+// import footer 
+import Footer from '../components/footer';
 
 export const metadata: Metadata = {
   title: 'Graunke Media'
@@ -18,11 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={poppins.className}>
-
+      <body className={syne.className}>
         <Header />
-        {children}
-        
+        {children }
+        <Footer />
       </body>
     </html>
   )
