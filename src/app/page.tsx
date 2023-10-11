@@ -76,14 +76,14 @@ export default function Home() {
         <div className='flex flex-col md:flex-row gap-6 px-4'>
           <div className='flex flex-col justify-between gap-y-6 '>
             <div className='md:ml-8 flex flex-col items-center md:items-start'>
-              <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2'>Quem sou</motion.h2>
+              <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2 text-[2.5rem]'>Quem sou</motion.h2>
               {/* hero lines  */}
               <div className='flex flex-row items-center gap-x-4'>
                 <div className='relative'>
                   <img src="/sla.png" className='w-full max-w-[81px] md:max-w-[178px]' alt="" />
                   <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
                 </div>
-                  <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2'>eu</motion.h2>
+                  <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2 text-[2.5rem]'>eu</motion.h2>
               </div>
             </div>
             {/* info  */}
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
 
         {/*  text & button  */}
-        <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col gap-y-8 px-4'>
+        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col gap-y-8 px-4'>
           <p className={`${archivo.className} p text-[1.2rem] md:text-[1.5rem] text-center`}>Aliquam tincidunt in lectus in dictum. Phasellus sodales hendrerit vehicula. Vivamus imperdiet sed ipsum non placerat. Sed at cursus risus.</p>
           <button className='btn self-center'>Sobre</button>
         </motion.div>

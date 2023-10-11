@@ -9,7 +9,7 @@
   }
 
   .h1 {
-    @apply text-white text-[2.5rem] md:text-[6rem] font-bold leading-[120%];
+    @apply text-white text-[2.8rem] md:text-[6rem] font-bold leading-[120%];
   }
 
   .h2 {
