@@ -14,7 +14,7 @@ export default function Header() {
         variants={fade}
         initial="variantInit"
         animate="variantAnim"
-        transition={transition1}className="bg-[#1e1e1e] flex w-full max-w-[20rem] lg:max-w-max justify-center items-center h-[80px] rounded-full border-[1px] border-[#fff]">
+        transition={transition1} className="bg-[#1e1e1e] flex w-full max-w-[21rem] lg:max-w-max justify-center items-center h-[80px] rounded-full border-[1px] border-[#fff]">
             <ul className="flex flex-row gap-x-10 w-full justify-between items-center m-2">
                 <li className="hidden lg:block"><a className="a p-[1.1rem] rounded-full transition-all duration-300 bg-[#2c2c2c]" href="#">Início</a></li>
                 <li className="hidden lg:block"><a className="a p-[20px] rounded-full transition-all duration-300 hover:bg-[#2c2c2c]" href="#">Sobre</a></li>

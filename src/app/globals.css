@@ -9,49 +9,25 @@
   }
 
   .h1 {
-    @apply text-white text-[3rem] lg:text-[6rem] font-bold leading-[120%];
-  }
-
-  .reveal {
-    @apply animate-[reveal_1s_ease-in-out];
-  }
-
-  @keyframes opacity {
-    from {
-      background-color: #131313;
-    } to {
-      background-color: #13131300;
-    }
-  }
-
-  @keyframes upward {
-    from {
-      opacity: 0;
-      transform: translateY(7.2rem);
-    } to {
-      opacity: 1;
-      transform: translateY(0rem);
-    }
+    @apply text-white text-[2.5rem] md:text-[6rem] font-bold leading-[120%];
   }
 
   .h2 {
-    @apply text-white text-[3rem] lg:text-[5rem] font-bold leading-[120%];
+    @apply text-white text-[1.9rem] md:text-[5rem] font-bold leading-[120%];
   }
   .h6 {
-    @apply text-white text-[1.5rem] font-bold leading-[90%]
+    @apply text-white text-[1.3rem] md:text-[1.5rem] font-bold leading-[90%]
   }
   .a {
     @apply text-[#ffffff] text-[1.3rem];
   }
   .p {
-    @apply text-[#ffffffcc] text-[1rem] lg:text-[1.5rem] font-[400] max-w-[43rem] leading-[1.1];
+    @apply text-[#ffffffcc] text-[1rem] md:text-[1.5rem] font-[400] max-w-[42rem] leading-[1.1];
   }
   .logos {
     @apply rounded;
   }
-  .section {
-    @apply overflow-x-hidden h-screen w-screen;
-  }
+  
   .btn {
     @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base bg-[#1e1e1e] text-white rounded-full border-[2px] text-[1.25rem] transition-all duration-500;
   }
@@ -101,8 +77,8 @@
   }
   .project_image_container {
     transform: translate3d(0.005%, 50%, 0px) scale3d(1.3, 1.3, 1) rotateX(0deg) rotateY(0deg) rotateZ(-1.5deg) skew(0deg, 0deg);
-    transition: all ease-out;
-    transition-duration: 300ms;
+    transition: all ease-in-out;
+    transition-duration: 500ms;
   }
   
   .project_image_container img {
@@ -117,7 +93,7 @@
   }
 
   .testimonial_img {
-    @apply w-[8.5rem] h-[8.5rem] scale-[0.85] opacity-40 border-[5px] border-[#2c2c2c] rounded-full cursor-pointer;
+    @apply w-[30%] md:w-full max-w-[8.5rem] max-h-[8.5rem] scale-[0.85] opacity-40 border-[5px] border-[#2c2c2c] rounded-full cursor-pointer;
   }
 
   .testimonial_img.active {
@@ -125,6 +101,6 @@
   }
 
   .social_link {
-    @apply text-[1.5rem] font-[600]
+    @apply text-[1.5rem] md:text-[2rem] font-[600];
   }
 }

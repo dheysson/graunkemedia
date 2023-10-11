@@ -1,4 +1,4 @@
 export const upward = {
-    variantInit: { transform: 'translateY(2rem)', opacity: 0 },
-    variantAnim: { transform: ['translateY(2rem)', 'translateY(0rem)'],opacity: [0, 1] }
+    variantInit: { transform: 'translateY(3rem)', opacity: 0 },
+    variantAnim: { transform: ['translateY(3rem)', 'translateY(0rem)'],opacity: [0, 1] }
 }
