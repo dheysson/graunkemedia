@@ -28,6 +28,7 @@ export default function Home() {
             <div>
               <motion.h1
               variants={upward}
+              initial="variantInit"
               whileInView="variantAnim"
               viewport={{once: true}}
               transition={transition1}
@@ -35,12 +36,13 @@ export default function Home() {
             </div>
             <div className='w-[25%] lg:w-full max-w-[9.5rem] lg:h-full max-h-[3.4rem] overflow-hidden relative'>
               <img src="/sla.png" className='w-full h-full object-cover' alt=""/>
-              <motion.div variants={leftward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
+              <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
             </div>
           </div>
           <div>
             <motion.h1 
             variants={upward}
+            initial="variantInit"
             whileInView="variantAnim"
             viewport={{once: true}}
             transition={transition1}
@@ -51,13 +53,14 @@ export default function Home() {
         <div className='mx-[1.2rem]'>
           <motion.p
           variants={upward}
+          initial="variantInit"
           whileInView="variantAnim"
           viewport={{once: true}}
           transition={transition1_d}
           className={`${archivo.className} p text-center`} >Eleve seu negócio para outro patamar com a decisão certa, assim como:</motion.p>
         </div>
         {/* logos  */}
-        <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-4 mx-4 px-4'>
+        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-4 mx-4 px-4'>
           <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471080e73077f74f023_logoipsum-253%201.svg" className='logos' alt="" />
           <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471ec8ca6aa822ed8c2_logoipsum-262%201.svg" className='logos' alt="" />
           <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471ec8ca6aa822ed84f_logoipsum-242%201.svg" className='logos' alt="" />
@@ -73,18 +76,18 @@ export default function Home() {
         <div className='flex flex-col md:flex-row gap-6 px-4'>
           <div className='flex flex-col justify-between gap-y-6 '>
             <div className='md:ml-8 flex flex-col items-center md:items-start'>
-              <motion.h2 variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2'>Quem sou</motion.h2>
+              <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2'>Quem sou</motion.h2>
               {/* hero lines  */}
               <div className='flex flex-row items-center gap-x-4'>
                 <div className='relative'>
                   <img src="/sla.png" className='w-full max-w-[81px] md:max-w-[178px]' alt="" />
-                  <motion.div variants={leftward} whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
+                  <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
                 </div>
-                  <motion.h2 variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2'>eu</motion.h2>
+                  <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2'>eu</motion.h2>
               </div>
             </div>
             {/* info  */}
-            <motion.div variants={lefttoright} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col bg-[#1e1e1e] max-w-[28rem] rounded-[2.5rem] p-8 justify-end'>
+            <motion.div variants={lefttoright} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col bg-[#1e1e1e] max-w-[28rem] rounded-[2.5rem] p-8 justify-end'>
               <h6 className='h6 mb-2'>3+ anos de experiência</h6>
               <p className={`${archivo.className} p`}>Meu nome é Tiago, tenho 20 anos, desde de 2020 trabalhei como Produtor e Editor de vídeo, e atualmente trabalho como Videomaker profissional.</p>
               <br />
@@ -96,7 +99,7 @@ export default function Home() {
             </motion.div>
           </div>
           {/* img  */}
-          <motion.div variants={righttoleft} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex w-full max-w-[28rem] rounded-[2.5rem] p-[1rem] bg-[#1e1e1e]'>
+          <motion.div variants={righttoleft} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex w-full max-w-[28rem] rounded-[2.5rem] p-[1rem] bg-[#1e1e1e]'>
             <img className='rounded-[2.5rem] flex object-cover' src='videomaker1.jpg'/>
           </motion.div>
         </div>
@@ -110,7 +113,7 @@ export default function Home() {
 
       {/* our services  */}
       <div className='flex flex-col items-center gap-y-16 bg-[#2c2c2c]'>
-        <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col items-center gap-y-16 m-10'>
+        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col items-center gap-y-16 m-10'>
           <h2 className='h2'>Serviços</h2>
           <div className='max-w-[62rem] grid md:grid-cols-2 gap-[1.25rem]'>
             <div className='grid_box left_top'>
@@ -136,20 +139,20 @@ export default function Home() {
       {/* my recent projects  */}
       <div className='container mx-auto'>
         <div className='container mx-auto flex flex-col items-center gap-y-16 w-[100%] max-w-[75rem] h-full relative px-4'>
-          <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='flex flex-col items-center m-4 md:m-10'>
+          <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='flex flex-col items-center m-4 md:m-10'>
             <motion.h2 variants={item} className='h2'>Meus projetos</motion.h2>
             {/* hero lines  */}
             <motion.div variants={item} className='flex flex-row items-center gap-x-4 md:gap-x-8'>
               <h2 className='h2'>recentes</h2>
               <div className='flex items-center w-[25%] md:w-full max-w-[6.2rem] h-[3.5rem] relative'>
                 <img src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647660d93f88ada3d18786a2_proj.webp" alt="" />
-                <motion.div variants={leftward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0' ></motion.div>
+                <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0' ></motion.div>
               </div>
             </motion.div>
           </motion.div>
 
           {/* projects  */}
-          <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='w-full max-w-[75rem] flex flex-col justify-center'>
+          <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='w-full max-w-[75rem] flex flex-col justify-center'>
             <div className='border-b-2 border-b-[#2c2c2c]'>
               <a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
                 <div>Lorien Website Design</div>
@@ -186,7 +189,7 @@ export default function Home() {
 
       {/* Testimonials  */}
       <div className='container mx-auto flex flex-col items-center gap-y-16 px-4'>
-        <motion.div variants={upward} whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col items-center bg-[#1e1e1e] w-[100%] max-w-[75rem] mx-auto text-center py-10 rounded-[2.5rem] gap-y-16 px-6'>
+        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='flex flex-col items-center bg-[#1e1e1e] w-[100%] max-w-[75rem] mx-auto text-center py-10 rounded-[2.5rem] gap-y-16 px-6'>
           <h2 className='h2'>Testimonials</h2>
 
           {/* testimonial img  */}
