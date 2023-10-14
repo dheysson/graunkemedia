@@ -22,7 +22,7 @@ export default function Projects() {
 							<div className="flex flex-row items-center gap-x-8">
 								<motion.h1 variants={upward} initial="variantInit" whileInView="variantAnim" transition={transition1} viewport={{once: true}} className="h1">Meus</motion.h1>
 								<div className="flex flex-row justify-center items-center w-[12rem] h-[4rem] relative">
-									<img src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647a51919b316f7adca437c2_ourprojects.webp" alt="" />
+									<img src="/mask.webp" alt="" />
 									<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" transition={transition1} viewport={{once: true}}  className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
 								</div>
 							</div>
@@ -90,18 +90,18 @@ export default function Projects() {
 
 				{/* Lets work together  */}
 				<div className='flex flex-col items-center relative mt-[10rem]'>
-			<div className='flex flex-col items-center gap-y-6 md:gap-y-16 w-full bg-cover bg-[url("https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477ba105ba0194f79a95af2_dim-gunger-oKN104dsNsY-unsplash%20(1)%202%20(1).jpg")]'>
-				<div className='mt-6 md:mt-10 bg-[rgba(30,30,30,0.6)] w-full max-w-[22rem] md:max-w-[70rem] rounded-[2.5rem]'>
-					<div className='flex flex-col items-center py-[2rem] md:py-[3rem] px-[0.5rem] gap-y-6'>
-						<h2 className='h2 text-[1.7rem] text-center'>Vamos trabalhar juntos</h2>
-						<p className={`${archivo.className} p text-[1rem] md:text-[1.5rem] text-center`}>Morbi elementum tellus non nunc fringilla, tempor imperdiet ex aliquam. Integer lacinia viverra blandit.</p>
+					<div className='flex flex-col items-center gap-y-6 md:gap-y-16 w-full bg-cover bg-[url("/facade.webp")]'>
+						<div className='mt-6 md:mt-10 bg-[rgba(30,30,30,0.6)] w-full max-w-[22rem] md:max-w-[70rem] rounded-[2.5rem]'>
+							<div className='flex flex-col items-center py-[2rem] md:py-[3rem] px-[0.5rem] gap-y-6'>
+								<h2 className='h2 text-[1.7rem] text-center'>Vamos trabalhar juntos</h2>
+								<p className={`${archivo.className} p text-[1rem] md:text-[1.5rem] text-center`}>Morbi elementum tellus non nunc fringilla, tempor imperdiet ex aliquam. Integer lacinia viverra blandit.</p>
+							</div>
+						</div>
+						
+						<button className='btn_light m-10'>Vamos conversar</button>
 					</div>
-				</div>
-				
-				<button className='btn_light m-10'>Vamos conversar</button>
-			</div>
 
-			<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
+					<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
 				</div>
       </motion.section>
     )
