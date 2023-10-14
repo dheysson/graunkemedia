@@ -14,13 +14,17 @@ import { item } from '../variants/item';
 import { righttoleft } from '../variants/righttoleft';
 import { lefttoright } from '../variants/lefttoright';
 
+import { useEffect, useState } from 'react'
+
 export default function Home() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
   return (
     <motion.section
     transition={transition1_s}
     className='flex flex-col gap-y-24 overflow-x-hidden'>
       {/* HERO CONTAINER  */}
-      <div className='container mx-auto flex flex-col items-center gap-y-8'>
+      <div className='container mx-auto flex flex-col items-center gap-y-10'>
         {/* hero  */}
         <div className='flex flex-col items-center mt-20'>
           {/* hero lines  */}
@@ -35,7 +39,7 @@ export default function Home() {
               className='h1'>Eleve-se</motion.h1>
             </div>
             <div className='w-[25%] lg:w-full max-w-[9.5rem] lg:h-full max-h-[3.4rem] overflow-hidden relative'>
-              <img src="/sla.png" className='w-full h-full object-cover' alt=""/>
+              <img src="/sla.webp" className='w-full h-full object-cover' alt=""/>
               <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
             </div>
           </div>
@@ -60,12 +64,12 @@ export default function Home() {
           className={`${archivo.className} p text-center`} >Eleve seu negócio para outro patamar com a decisão certa, assim como:</motion.p>
         </div>
         {/* logos  */}
-        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-4 mx-4 px-4'>
-          <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471080e73077f74f023_logoipsum-253%201.svg" className='logos' alt="" />
-          <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471ec8ca6aa822ed8c2_logoipsum-262%201.svg" className='logos' alt="" />
-          <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471ec8ca6aa822ed84f_logoipsum-242%201.svg" className='logos' alt="" />
-          <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471a5344c506d42d2c6_logoipsum-221%201.svg" className='logos' alt="" />
-          <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471bc00acf4a3afcec5_logoipsum-220%201.svg" className='logos' alt="" />
+        <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-6 mx-4 px-4'>
+          <motion.img width="150px" variants={item} src="/logos/logo_multisol.png" alt="" />
+          <motion.img width="150px" variants={item} src="/logos/logo_gazin.png" alt="" />
+          <motion.img variants={item} src="/logos/logo_physicus.png" alt="" />
+          <motion.img variants={item} src="/logos/logo_serving.png" alt="" />
+          <motion.img variants={item} src="/logos/logo_wilnet.png" alt="" />
           <motion.img variants={item} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/64763471ec8ca6aa822ed8c2_logoipsum-262%201.svg" className='logos md:hidden' alt="" />
         </motion.div>
       </div>
@@ -76,14 +80,14 @@ export default function Home() {
         <div className='flex flex-col md:flex-row gap-6 px-4'>
           <div className='flex flex-col justify-between gap-y-6 '>
             <div className='md:ml-8 flex flex-col items-center md:items-start'>
-              <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2 text-[2.5rem]'>Quem sou</motion.h2>
+              <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h2'>Quem sou</motion.h2>
               {/* hero lines  */}
               <div className='flex flex-row items-center gap-x-4'>
                 <div className='relative'>
-                  <img src="/sla.png" className='w-full max-w-[81px] md:max-w-[178px]' alt="" />
+                  <img src="/sla.webp" className='w-full max-w-[81px] md:max-w-[178px]' alt="" />
                   <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
                 </div>
-                  <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2 text-[2.5rem]'>eu</motion.h2>
+                  <motion.h2 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d} className='h2'>eu</motion.h2>
               </div>
             </div>
             {/* info  */}
@@ -145,7 +149,7 @@ export default function Home() {
             <motion.div variants={item} className='flex flex-row items-center gap-x-4 md:gap-x-8'>
               <h2 className='h2'>recentes</h2>
               <div className='flex items-center w-[25%] md:w-full max-w-[6.2rem] h-[3.5rem] relative'>
-                <img src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647660d93f88ada3d18786a2_proj.webp" alt="" />
+                <img src="/shape_small.webp" alt="" />
                 <motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0' ></motion.div>
               </div>
             </motion.div>
@@ -181,7 +185,7 @@ export default function Home() {
               </a>
             </div>
 
-            <button className='mt-10 btn self-center'>Todos projetos</button>
+            <a href='/projects' className='mt-10 btn self-center'>Todos projetos</a>
           </motion.div>
 
         </div>
@@ -194,24 +198,34 @@ export default function Home() {
 
           {/* testimonial img  */}
           <div className='flex flex-row gap-x-4 md:gap-x-16'>
-            <img className='testimonial_img active' src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b3b8df2631cdcd1d0602_tes1.webp" alt="" />
-            <img className='testimonial_img' src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b371794c06c0e6cbf1b2_tes3.webp" alt="" />
-            <img className='testimonial_img' src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b3c572021272a7580bc3_tes2.webp" alt="" />
+            <img onClick={() => setActiveTestimonial(0)} className={`testimonial_img ${activeTestimonial == 0 ? 'active' : '' }`} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b3b8df2631cdcd1d0602_tes1.webp" alt="" />
+            <img onClick={() => setActiveTestimonial(1)} className={`testimonial_img ${activeTestimonial == 1 ? 'active' : '' }`} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b371794c06c0e6cbf1b2_tes3.webp" alt="" />
+            <img onClick={() => setActiveTestimonial(2)} className={`testimonial_img ${activeTestimonial == 2 ? 'active' : '' }`} src="https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477b3c572021272a7580bc3_tes2.webp" alt="" />
           </div>
 
           {/* testimonial info  */}
           <div>
-            <p className={`${archivo.className} p `}>Mauris rutrum ante sapien, eget venenatis est aliquet non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut posuere vel lacus vel vehicula.</p>
+            <p className={`${archivo.className} p`}>
+              { activeTestimonial == 0 ? 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut posuere vel lacus vel vehicula. Mauris rutrum ante sapien, eget venenatis est aliquet non.' : ''}
+              { activeTestimonial == 1 ? 'Mauris rutrum ante sapien, eget venenatis est aliquet non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut posuere vel lacus vel vehicula.' : ''}
+              { activeTestimonial == 2 ? 'Ut posuere vel lacus vel vehicula. Mauris rutrum ante sapien, eget venenatis est aliquet non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.' : ''}
+            </p>
+   
             <br />
+
             <div className='testimonials_author_information'>
               <div className={`${archivo.className} testimonial_author text-[1.2rem]`}>
-                Larry Wagner
+                { activeTestimonial == 0 ? 'Larry Warner' : '' }
+                { activeTestimonial == 1 ? 'John Pearson' : '' }
+                { activeTestimonial == 2 ? 'Siena Whitney' : '' }
               </div>
+
               <div className={`${archivo.className} testimonial_author_job text-[1.1rem] text-[#ffffffcc]`}>
-                Digital Project Manager
+                { activeTestimonial == 0 ? 'Digital Project Manager' : '' }
+                { activeTestimonial == 1 ? 'Web Developer' : '' }
+                { activeTestimonial == 2 ? 'Web Designer' : '' }
               </div>
             </div>              
-        
           </div>
 
         </motion.div>
@@ -219,7 +233,7 @@ export default function Home() {
 
       {/* Lets work together  */}
       <div className='flex flex-col items-center relative'>
-        <div className='flex flex-col items-center gap-y-6 md:gap-y-16 w-full bg-cover bg-[url("https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6477ba105ba0194f79a95af2_dim-gunger-oKN104dsNsY-unsplash%20(1)%202%20(1).jpg")]'>
+        <div className='flex flex-col items-center gap-y-6 md:gap-y-16 w-full bg-cover bg-[url("/facade.webp")]'>
           <div className='mt-6 md:mt-10 bg-[rgba(30,30,30,0.6)] w-full max-w-[22rem] md:max-w-[70rem] rounded-[2.5rem]'>
             <div className='flex flex-col items-center py-[2rem] md:py-[3rem] px-[0.5rem] gap-y-6'>
               <h2 className='h2 text-[1.7rem] text-center'>Vamos trabalhar juntos</h2>

@@ -13,6 +13,7 @@ import Header from '../components/header';
 // import footer 
 import Footer from '../components/footer';
 
+
 export const metadata: Metadata = {
   title: 'Graunke Media'
 }

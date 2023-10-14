@@ -13,7 +13,7 @@
   }
 
   .h2 {
-    @apply text-white text-[1.9rem] md:text-[5rem] font-bold leading-[120%];
+    @apply text-white text-[2rem] md:text-[4rem] font-bold leading-[120%];
   }
   .h6 {
     @apply text-white text-[1.3rem] md:text-[1.5rem] font-bold leading-[90%]
@@ -22,8 +22,12 @@
     @apply text-[#ffffff] text-[1.3rem];
   }
   .p {
-    @apply text-[#ffffffcc] text-[1rem] md:text-[1.5rem] font-[400] max-w-[42rem] leading-[1.1];
+    @apply text-[#ffffffcc] text-[1rem] md:text-[1.25rem] font-[400] max-w-[42rem] leading-[1.1];
   }
+  .small {
+    @apply text-[1rem];
+  }
+
   .logos {
     @apply rounded;
   }
@@ -44,16 +48,16 @@
     @apply p-[2rem] pr-[1.25rem] min-h-[12rem] gap-[1.25rem] bg-cover rounded-[2.5rem] flex flex-col;
   }
   .left_top {
-    @apply bg-[linear-gradient(rgba(19,19,19,0.8),rgba(19,19,19,0.8)),url('https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647656910c45f11e02205abd_ser.webp')] bg-[auto,cover];
+    @apply bg-[linear-gradient(rgba(19,19,19,0.5),rgba(19,19,19,0.2)),url('/ser1.webp')] bg-[auto,cover];
   }
   .right_top {
-    @apply bg-[linear-gradient(rgba(19,19,19,0.8),rgba(19,19,19,0.8)),url('https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647657c63f88ada3d17e8eae_ser2.webp')] bg-[auto,cover];
+    @apply bg-[linear-gradient(rgba(19,19,19,0.5),rgba(19,19,19,0.2)),url('/ser2.webp')] bg-[auto,cover];
   }
   .left_bottom {
-    @apply bg-[linear-gradient(rgba(19,19,19,0.8),rgba(19,19,19,0.8)),url('https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/6476589c9ecaea82a99e6da7_ser3.webp')] bg-[auto,cover];
+    @apply bg-[linear-gradient(rgba(19,19,19,0.5),rgba(19,19,19,0.2)),url('/ser3.webp')] bg-[auto,cover];
   }
   .right_bottom {
-    @apply bg-[linear-gradient(rgba(19,19,19,0.8),rgba(19,19,19,0.8)),url('https://uploads-ssl.webflow.com/64747a96c35f97463da63b1b/647658d30147cf8862c0b61c_ser4.webp')] bg-[auto,cover];
+    @apply bg-[linear-gradient(rgba(19,19,19,0.5),rgba(19,19,19,0.2)),url('/ser4.webp')] bg-[auto,cover];
   }
   
 
@@ -77,8 +81,8 @@
   }
   .project_image_container {
     transform: translate3d(0.005%, 50%, 0px) scale3d(1.3, 1.3, 1) rotateX(0deg) rotateY(0deg) rotateZ(-1.5deg) skew(0deg, 0deg);
-    transition: all ease-in-out;
-    transition-duration: 500ms;
+    transition: all ease-out;
+    transition-duration: 400ms;
   }
   
   .project_image_container img {
@@ -93,7 +97,7 @@
   }
 
   .testimonial_img {
-    @apply w-[30%] md:w-full max-w-[8.5rem] max-h-[8.5rem] scale-[0.85] opacity-40 border-[5px] border-[#2c2c2c] rounded-full cursor-pointer;
+    @apply w-[30%] md:w-full max-w-[8.5rem] max-h-[8.5rem] scale-[0.85] opacity-40 border-[5px] border-[#2c2c2c] rounded-full cursor-pointer transition-all;
   }
 
   .testimonial_img.active {
@@ -101,6 +105,6 @@
   }
 
   .social_link {
-    @apply text-[1.5rem] md:text-[2rem] font-[600];
+    @apply text-[1.2rem] md:text-[1.8rem] font-[600];
   }
 }
