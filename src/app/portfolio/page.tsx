@@ -1,8 +1,5 @@
 "use client";
 
-import { Archivo } from 'next/font/google';
-const archivo = Archivo({subsets: ['latin'], weight: ['400']});
-
 import { motion } from 'framer-motion'
 
 import { upward } from '../../variants/upward'
@@ -30,20 +27,20 @@ export default function Projects() {
 							<motion.h1 variants={upward} initial="variantInit" whileInView="variantAnim" transition={transition1} viewport={{once: true}} className="h1">Meus</motion.h1>
 							<div className="flex flex-row justify-center items-center w-[8rem] md:w-[12rem] h-[4rem] relative">
 								<img src="/mask.webp" alt="" />
-								<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" transition={transition1} viewport={{once: true}}  className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
+								<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" transition={transition1} viewport={{once: true}}  className='absolute black h-full top-0 bottom-auto left-auto right-0'></motion.div>
 							</div>
 						</div>
 						<motion.h1 variants={upward} initial="variantInit" whileInView="variantAnim" transition={transition1_d} viewport={{once: true}}  className="h1">Projetos</motion.h1>
 					</div>
 					{/* text  */}
 					<motion.div variants={upward} initial="variantInit" whileInView="variantAnim" transition={transition1_d} viewport={{once: true}} >
-						<p className={`${archivo.className} p`}>Cras volutpat, libero et euismod semper, neque orci rhoncus magna, eu venenatis tortor nibh at purus. Vivamus sit amet commodo tortor.</p>
+						<p className='p large'>Cras volutpat, libero et euismod semper, neque orci rhoncus magna, eu venenatis tortor nibh at purus. Vivamus sit amet commodo tortor.</p>
 					</motion.div>
 				</div>
 
 				{/* projects  */}
 				<motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='w-full max-w-[75rem] flex flex-col justify-center'>
-					<div className='border-b-2 border-b-[#2c2c2c]'>
+					<div className='border-b-2 border-b-[--grey-medium]'>
 						<a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
 							<div>Lorien Website Design</div>
 							<div className='project_image_container'>
@@ -53,7 +50,7 @@ export default function Projects() {
 						</a>
 					</div>
 					
-					<div className='border-b-2 border-b-[#2c2c2c]'>
+					<div className='border-b-2 border-b-[--grey-medium]'>
 						<a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
 							<div>Digital Branding for TriOne</div>
 							<div className='project_image_container'>
@@ -63,7 +60,7 @@ export default function Projects() {
 						</a>
 					</div>
 
-					<div className='border-b-2 border-b-[#2c2c2c]'>
+					<div className='border-b-2 border-b-[--grey-medium]'>
 						<a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
 							<div>Web Development for QuickRop</div>
 							<div className='project_image_container'>
@@ -73,7 +70,7 @@ export default function Projects() {
 						</a>
 					</div>
 
-					<div className='border-b-2 border-b-[#2c2c2c]'>
+					<div className='border-b-2 border-b-[--grey-medium]'>
 						<a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
 							<div>I Dont Give A Fuck</div>
 							<div className='project_image_container'>
@@ -83,7 +80,7 @@ export default function Projects() {
 						</a>
 					</div>
 
-					<div className='border-b-2 border-b-[#2c2c2c]'>
+					<div className='border-b-2 border-b-[--grey-medium]'>
 						<a className='a project_title text-[1.2rem] md:text-[1.5rem] flex h-[7.75rem] items-center relative' href="#">
 							<div>Oh My God</div>
 							<div className='project_image_container'>
@@ -101,14 +98,14 @@ export default function Projects() {
 					<div className='mt-6 md:mt-10 bg-[rgba(30,30,30,0.6)] w-full max-w-[22rem] md:max-w-[70rem] rounded-[2.5rem]'>
 						<div className='flex flex-col items-center py-[2rem] md:py-[3rem] px-[0.5rem] gap-y-6'>
 							<h2 className='h2 text-[1.7rem] text-center'>Vamos trabalhar juntos</h2>
-							<p className={`${archivo.className} p text-[1rem] md:text-[1.5rem] text-center`}>Morbi elementum tellus non nunc fringilla, tempor imperdiet ex aliquam. Integer lacinia viverra blandit.</p>
+							<p className='p text-[1rem] md:text-[1.5rem] text-center'>Morbi elementum tellus non nunc fringilla, tempor imperdiet ex aliquam. Integer lacinia viverra blandit.</p>
 						</div>
 					</div>
 					
 					<button className='btn_light m-10'>Vamos conversar</button>
 				</div>
 
-				<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute bg-[#131313] h-full top-0 bottom-auto left-auto right-0'></motion.div>
+				<motion.div variants={leftward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='absolute black h-full top-0 bottom-auto left-auto right-0'></motion.div>
 			</div>
       </motion.section>
     )

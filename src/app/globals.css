@@ -4,27 +4,56 @@
 
 @layer base {
 
+  :root {
+    --main-bg-color: #131313;
+    --grey: #1e1e1e;
+    --grey-medium: #2c2c2c;
+    --off-white: #e5e5e5;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+  }
+
   body {
-    @apply bg-[#131313] text-[#fff];
+    @apply bg-[--main-bg-color] text-[--text-light];
   }
 
   .h1 {
-    @apply text-white text-[2.8rem] md:text-[6rem] font-bold leading-[120%];
+    @apply text-[2.8rem] md:text-[6rem] font-bold leading-[120%];
   }
-
   .h2 {
-    @apply text-white text-[2rem] md:text-[4rem] font-bold leading-[120%];
+    @apply text-[2rem] md:text-[5rem] font-bold leading-[120%];
+  }
+  .h3 {
+    @apply text-[4rem] font-bold leading-[120%];
+  }
+  .h4 {
+    @apply text-[3rem] font-bold leading-[120%];
+  }
+  .h5 {
+    @apply text-[2rem] font-bold leading-[120%];
   }
   .h6 {
-    @apply text-white text-[1.3rem] md:text-[1.5rem] font-bold leading-[90%]
+    @apply text-[1.3rem] md:text-[1.5rem] font-bold leading-[90%];
   }
+
   .a {
     @apply text-[#ffffff] text-[1.3rem];
   }
+
   .p {
-    @apply text-[#ffffffcc] text-[1rem] md:text-[1.25rem] font-[400] max-w-[42rem] leading-[1.1];
+    @apply text-[#ffffffcc] font-normal max-w-[43rem] font-archivo leading-[110%];;
   }
-  .small {
+
+  .p.large {
+    @apply text-[1.5rem];
+  }
+  .p.medium {
+    @apply text-[1.25rem];
+  }
+  .p.regular {
+    @apply text-[1.125rem];
+  }
+  .p.small {
     @apply text-[1rem];
   }
 
@@ -110,5 +139,26 @@
 
   .active_tab {
     @apply bg-[#2c2c2c];
+  }
+
+  .tab {
+    @apply p-[20px] rounded-full transition-all duration-300 hover:bg-[#2c2c2c];
+  } 
+
+  .mtab {
+    @apply p-[20px] rounded-full transition-all duration-300 hover:bg-[#2c2c2c];
+  }
+
+  .black {
+    @apply bg-[--main-bg-color];
+  }
+  .grey {
+    @apply bg-[--grey];
+  }
+  .grey_medium {
+    @apply bg-[--grey-medium];
+  }
+  .off_white {
+    @apply text-[--off-white];
   }
 }

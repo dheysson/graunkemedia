@@ -15,7 +15,7 @@ export default function Footer() {
 				<div className='flex flex-row justify-between'>
 					{/* menu  */}
 					<div className='flex flex-col gap-y-6 px-6'>
-						<a className={`${archivo.className} p text-[1.5rem] text-[#ffffff] font-[600] leading-[1] after:content-[''] after:w-[3rem] after:mt-1 after:h-[2px] after:bg-[#3acdda] after:block`}>Menu</a>
+						<a className={`${archivo.className} p medium text-[#ffffff] font-[600] leading-[1] after:content-[''] after:w-[3rem] after:mt-1 after:h-[2px] after:bg-[#3acdda] after:block`}>Menu</a>
 						<a href='/' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Início </a>
 						<a href='/portfolio' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Portfólio </a>
 						<a href='/about' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Sobre </a>
@@ -26,7 +26,7 @@ export default function Footer() {
 						{/* icon & text  */}
 						<div className='flex flex-col items-center w-full max-w-[30rem]'>
 							<img src="/logo.png" className='w-full max-w-[64px] h-full max-h-[64px] mb-3' alt="" />
-							<p className={`${archivo.className} p mb-10 w-[8rem] md:w-full`}>A Graunke Media está por toda parte, inclusive nas redes socias.</p>
+							<p className={`${archivo.className} p small mb-10 w-[8rem] md:w-full`}>A Graunke Media está por toda parte, inclusive nas redes socias.</p>
 						</div>
 						
 						{/* social media  */}
