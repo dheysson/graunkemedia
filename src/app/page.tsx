@@ -19,6 +19,11 @@ import { useEffect, useState } from 'react'
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
+  useEffect(() => {
+		document.querySelectorAll('.tab')[0]?.classList.add('active_tab');
+		document.querySelectorAll('.mtab')[0]?.classList.add('active_tab');
+	})
+
   return (
     <motion.section
     transition={transition1_s}

@@ -16,10 +16,10 @@ export default function Footer() {
 					{/* menu  */}
 					<div className='flex flex-col gap-y-6 px-6'>
 						<a className={`${archivo.className} p text-[1.5rem] text-[#ffffff] font-[600] leading-[1] after:content-[''] after:w-[3rem] after:mt-1 after:h-[2px] after:bg-[#3acdda] after:block`}>Menu</a>
-						<a href='/' className={`${archivo.className} p`}> Início </a>
-						<a href='/portfolio' className={`${archivo.className} p`}> Portfólio </a>
-						<a href='/about' className={`${archivo.className} p`}> Sobre </a>
-						<a href='/contact' className={`${archivo.className} p`}> Contato </a>
+						<a href='/' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Início </a>
+						<a href='/portfolio' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Portfólio </a>
+						<a href='/about' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Sobre </a>
+						<a href='/contact' className={`${archivo.className} p hover:text-[#ffffffa1] transition-all`}> Contato </a>
 					</div>
 
 					<div className='flex flex-col items-center px-6'>

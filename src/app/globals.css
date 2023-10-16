@@ -105,6 +105,10 @@
   }
 
   .social_link {
-    @apply text-[1.2rem] md:text-[1.8rem] font-[600];
+    @apply hover:text-[#ffffffcc] text-[1.2rem] md:text-[1.8rem] font-[600] transition-all;
+  }
+
+  .active_tab {
+    @apply bg-[#2c2c2c];
   }
 }
