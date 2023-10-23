@@ -5,7 +5,7 @@
 @layer base {
 
   :root {
-    --main-bg-color: #131313;
+    --main-bg-color: #101010;
     --grey: #1e1e1e;
     --grey-medium: #2c2c2c;
     --off-white: #e5e5e5;
@@ -160,5 +160,30 @@
   }
   .off_white {
     @apply text-[--off-white];
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #131313;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  canva {
+    @apply fixed top-[50%] right-0;
   }
 }
