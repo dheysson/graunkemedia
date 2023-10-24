@@ -43,9 +43,6 @@ export default function Drone(){
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
     scene.add(directionalLight);
 
-		const helper = new THREE.DirectionalLightHelper(directionalLight, 5, 0x3aebf7);
-		scene.add(helper);
-
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     scene.add(ambientLight);
 
@@ -56,7 +53,6 @@ export default function Drone(){
     const clock = new THREE.Clock();
     function animate(){
       mixer?.update(clock.getDelta());
-			helper.update();
       renderer.render(scene, camera);
     }
     renderer.setAnimationLoop(animate);
