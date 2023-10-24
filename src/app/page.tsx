@@ -12,73 +12,19 @@ import { item } from '../variants/item';
 import { righttoleft } from '../variants/righttoleft';
 import { lefttoright } from '../variants/lefttoright';
 
-import { useEffect, useState, useRef } from 'react'
+import { useState } from 'react'
 
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import Drone from '../components/drone';
+import Camera from '../components/camera';
 
 export default function Home() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const effectRender = useRef(false);
-
-  useEffect(() => {
-		document.querySelectorAll('.tab')[0]?.classList.add('active_tab');
-		document.querySelectorAll('.mtab')[0]?.classList.add('active_tab');
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(32, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
-    renderer.setSize(426 / 2, 240 / 2);
-
-    if(effectRender.current === false) {
-      document.querySelector('.drone')?.appendChild(renderer.domElement);
-      effectRender.current = true;
-    }
-
-    let mixer: any;
-    const loader = new GLTFLoader();
-    loader.load('drone_rigged.glb', (gltf) => {
-      camera.lookAt(gltf.scene.position);
-      scene.add(gltf.scene);
-
-      const mesh = gltf.scene;
-      mixer = new THREE.AnimationMixer(mesh);
-      const clips = gltf.animations;
-
-      // const clip = THREE.AnimationClip.findByName(clips, 'Take 01');
-      // const action = mixer.clipAction(clip);
-      // action.play();
-
-      clips.forEach( function ( clip ) {
-        mixer.clipAction( clip ).play();
-      });
-    }, undefined, function(error) {
-      console.log(error);
-    })
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    scene.add(directionalLight);
-
-    camera.position.x = 8;
-    camera.position.y = 6;
-    camera.position.z = 10.5;
-
-    const clock = new THREE.Clock();
-    function animate(){
-      mixer?.update(clock.getDelta());
-      renderer.render(scene, camera);
-    }
-    renderer.setAnimationLoop(animate);
-	});
+  const [activeTestimonial, setActiveTestimonial] = useState(0);  
 
   return (
     <motion.section
     transition={transition1_s}
     className='flex flex-col gap-y-24 overflow-x-hidden'>
-      
-      <div className='drone fixed top-0 right-0 z-50 h-[48rem]'>
-
-      </div>
+      <Drone />
 
       {/* HERO CONTAINER  */}
       <div className='container mx-auto flex flex-col items-center gap-y-10'>

@@ -183,7 +183,20 @@
     background: #555;
   }
 
-  canva {
-    @apply fixed top-[50%] right-0;
+  canvas {
+    @apply mt-28;
+  }
+
+  .canon canvas {
+    margin-right: -50px;
+    animation: test ease-in-out 2s alternate infinite;
+  }
+
+  @keyframes test {
+    from {
+      transform: translateY(-20px);
+    } to {
+      transform: translateY(0px);
+    }
   }
 }
