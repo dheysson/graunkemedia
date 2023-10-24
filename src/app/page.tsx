@@ -15,7 +15,6 @@ import { lefttoright } from '../variants/lefttoright';
 import { useState } from 'react'
 
 import Drone from '../components/drone';
-import Camera from '../components/camera';
 
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);  
@@ -24,14 +23,18 @@ export default function Home() {
     <motion.section
     transition={transition1_s}
     className='flex flex-col gap-y-24 overflow-x-hidden'>
-      <Drone />
+      
 
       {/* HERO CONTAINER  */}
       <div className='container mx-auto flex flex-col items-center gap-y-10'>
+        
+
         {/* hero  */}
         <div className='flex flex-col items-center mt-20'>
+          {/* DRONE  */}
+          <Drone />
           {/* hero lines  */}
-          <div className='flex flex-row justify-center items-center gap-x-2 md:gap-x-4'>
+          <div className='flex flex-row justify-center items-center gap-x-2 md:gap-x-4 z-50'>
             <div>
               <motion.h1 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h1'>Eleve-se</motion.h1>
             </div>
@@ -43,11 +46,11 @@ export default function Home() {
           <div>
             <motion.h1 variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1} className='h1'>Para o novo</motion.h1>
           </div>
-        </div>
-        {/* text  */}
-        <div className='mx-[1.2rem]'>
-          <motion.p variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d}
-          className={`p large text-center`} >Eleve seu negócio para outro patamar com a decisão certa, assim como:</motion.p>
+          </div>
+          {/* text  */}
+          <div className='mx-[1.2rem]'>
+            <motion.p variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_d}
+            className={`p large text-center`} >Eleve seu negócio para outro patamar com a decisão certa, assim como:</motion.p>
         </div>
         {/* logos  */}
         <motion.div variants={upward} initial="variantInit" whileInView="variantAnim" viewport={{once: true}} transition={transition1_s} className='grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-6 mx-4 px-4'>

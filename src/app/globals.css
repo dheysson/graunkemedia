@@ -184,17 +184,12 @@
   }
 
   canvas {
-    @apply mt-28;
+    animation: upward 1.5s ease-in-out;
   }
 
-  .canon canvas {
-    margin-right: -50px;
-    animation: test ease-in-out 2s alternate infinite;
-  }
-
-  @keyframes test {
+  @keyframes upward {
     from {
-      transform: translateY(-20px);
+      transform: translateY(300px);
     } to {
       transform: translateY(0px);
     }
