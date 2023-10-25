@@ -17,7 +17,7 @@ import { useState } from 'react'
 import Drone from '../components/drone';
 
 export default function Home() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);  
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
     <motion.section
@@ -31,8 +31,10 @@ export default function Home() {
 
         {/* hero  */}
         <div className='flex flex-col items-center mt-20'>
+          
           {/* DRONE  */}
           <Drone />
+          
           {/* hero lines  */}
           <div className='flex flex-row justify-center items-center gap-x-2 md:gap-x-4 z-50'>
             <div>

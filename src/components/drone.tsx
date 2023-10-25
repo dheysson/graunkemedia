@@ -8,9 +8,9 @@ export default function Drone(){
 
     useEffect(() => {
 			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 1000);
+			const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
 			const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
-			renderer.setSize(426 * 0.7, 240 * 0.7);
+			renderer.setSize(426 * 0.9, 240 * 0.9);
 
 			if(effectRender.current === false) {
 				document.querySelector('.drone')?.appendChild(renderer.domElement);
@@ -22,12 +22,10 @@ export default function Drone(){
 			loader.load('drone_rigged.glb', (gltf) => {
       const rot = new THREE.Vector3(0,1,0);
       gltf.scene.rotation.setFromVector3(rot);
-      // gltf.scene.scale.set(1.1,1.1,1.1);
-
+      gltf.scene.scale.set(1.4,1.4,1.4);
       camera.lookAt(gltf.scene.position);
-
       scene.add(gltf.scene);
-
+      
       const mesh = gltf.scene;
       mixer = new THREE.AnimationMixer(mesh);
       const clips = gltf.animations;
@@ -50,7 +48,7 @@ export default function Drone(){
     scene.add(ambientLight);
 
     camera.position.x = 8;
-    camera.position.y = 7;
+    camera.position.y = 6;
     camera.position.z = 10.5;
 
     const clock = new THREE.Clock();
